@@ -8,7 +8,7 @@ import FileSaver from 'file-saver';
 })
 
 export class AppComponent {
-  numbersValue: string;
+  numbersValue = '';
   phoneNumbers = [];
   spanError = false;
   spanErrorText = '';
@@ -41,9 +41,11 @@ export class AppComponent {
   }
 
   downloadAsPDF() {
-    const numbersString = this.phoneNumbers.join('\r\n');
-    const blob = new Blob([numbersString], { type: 'text/plain;charset=utf-8' });
-    FileSaver.saveAs(blob, 'phone-numbers.txt');
+    if (this.phoneNumbers.length > 0) {
+      const numbersString = this.phoneNumbers.join('\r\n');
+      const blob = new Blob([numbersString], { type: 'text/plain;charset=utf-8' });
+      FileSaver.saveAs(blob, 'phone-numbers.txt');
+    }
   }
 
   clearNumbers() {
