@@ -21,6 +21,10 @@ module.exports = function (config) {
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],
+    coverageReporter: {
+      type: 'lcov',
+      dir: 'coverage/'
+    },
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
         base: 'ChromeHeadless',
