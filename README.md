@@ -23,4 +23,4 @@ Start the server using `ng serve` and navigate to `http://localhost:4200/`.
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Hosting
-
+Find [Genny](https://njeri-ngigi.github.io/Number-Generator/) on Github Pages
